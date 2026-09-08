@@ -5,7 +5,7 @@ backend:
   name: github
   repo: ArtMyers/tech-blog
   branch: main
-  base_url: https://sveltia-oauth-gateway.artembasarab-work.workers.dev
+  base_url: https://sveltia-cms-auth.artembasarab-work.workers.dev/
 
 # Папка для медіафайлів (відносно кореня проекту)
 media_folder: "src/assets/images"
