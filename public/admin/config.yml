@@ -10,7 +10,7 @@ backend:
 
 # Папка для медіафайлів (відносно кореня проекту)
 media_folder: "src/assets/images"
-public_folder: "../../assets/images"
+public_folder: "/assets/images"
 
 collections:
   - name: "blog"
