@@ -1,0 +1,48 @@
+# Sveltia CMS Configuration
+# Docs: https://sveltiacms.app/en/docs
+
+backend:
+  name: github
+  repo: ArtMyers/tech-blog
+  branch: main
+  base_url: https://sveltia-oauth-gateway.artembasarab-work.workers.dev
+  auth_endpoint: /auth
+
+# Папка для медіафайлів (відносно кореня проекту)
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Post"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "string"
+      - label: "Publish Date"
+        name: "pubDate"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Updated Date"
+        name: "updatedDate"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+      - label: "Hero Image"
+        name: "heroImage"
+        widget: "image"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
